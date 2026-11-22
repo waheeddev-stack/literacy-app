@@ -39,7 +39,7 @@ export default function ChatWidget() {
     {open && (
       <div className="chat" role="dialog" aria-label="Eco Helper chat" onKeyDown={e => e.key === 'Escape' && close()}>
         <header className="chat-head">
-          <div><strong>Eco Helper</strong><div className="xs">{known ? `${known} ready answers` : 'Ask me anything eco'}</div></div>
+          <div><strong>Eco Helper</strong><div className="xs">Your environment and platform assistant</div></div>
           <button className="chat-x" aria-label="Close chat" onClick={close}>×</button>
         </header>
         <div className="chat-body" role="log" aria-live="polite">
