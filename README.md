@@ -86,6 +86,7 @@ stores emails in `newsletter_subscribers`. Social links in the footer are placeh
 - **Participation metrics**: quiz and weekly check-in rates for classes and institutions (PRD success metrics), plus a "nudge these students" list.
 - **Question item statistics** (content admins): % correct per question, flagged when too easy or too hard.
 - **My account** (everyone): rename, change password, download my data as JSON.
+- **Eco Helper chatbot** (everyone, including the public landing page): a floating chat with 76 predefined answers on waste, water, energy, biodiversity, climate, air, transport, Mira-Bhayandar and how the platform works. It uses keyword matching (no AI service): phrases and inflected words are scored against each answer, with related-question chips and a topic-aware fallback. Add answers in `env-literacy-server/src/data/knowledgeBase.js`; check them with `node scripts/chat-selftest.mjs`.
 
 ## Decisions and assumptions to review
 

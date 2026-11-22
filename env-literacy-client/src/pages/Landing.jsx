@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { post } from '../api/client.js';
+import ChatWidget from '../components/ChatWidget.jsx';
 import '../styles/landing.css';
 
 const prefersReduced = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -261,6 +262,7 @@ export default function Landing() {
           <div className="ld-legal"><span>© {new Date().getFullYear()} Environmental Literacy Platform</span><span>Mira-Bhayandar, Maharashtra</span></div>
         </div>
       </footer>
+      <ChatWidget />
     </div>
   );
 }

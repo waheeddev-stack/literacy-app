@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth.jsx';
+import ChatWidget from './ChatWidget.jsx';
 
 const NAV = {
   student: [['/', 'Home', true], ['/quizzes', 'Quizzes'], ['/checkin', 'Check-in'], ['/practice', 'Practice'], ['/challenges', 'Challenges'], ['/account', 'Account']],
@@ -42,6 +43,7 @@ export default function Layout() {
           </div>
         </aside>
         <main className="main"><Outlet /></main>
+        <ChatWidget />
       </div>
     );
   }
@@ -53,6 +55,7 @@ export default function Layout() {
         <ThemeToggle /><button className="btn text" onClick={logout}>Log out</button>
       </div></header>
       <main className="main"><div className="xs muted" style={{ marginBottom: 'var(--s2)' }}>{who}</div><Outlet /></main>
+      <ChatWidget />
     </div>
   );
 }

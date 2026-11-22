@@ -19,6 +19,7 @@ import { achievementsRouter, challengesRouter, learnRouter } from './routes/enga
 import announcementRoutes from './routes/announcements.js';
 import accountRoutes from './routes/account.js';
 import newsletterRoutes from './routes/newsletter.js';
+import chatRoutes from './routes/chat.js';
 
 export function createApp() {
   const app = express();
@@ -56,6 +57,7 @@ export function createApp() {
   v1.use('/announcements', announcementRoutes);
   v1.use('/account', accountRoutes);
   v1.use('/newsletter', authLimiter, newsletterRoutes);
+  v1.use('/chat', chatRoutes);
   app.use('/api/v1', v1);
 
   app.use(notFoundHandler);
