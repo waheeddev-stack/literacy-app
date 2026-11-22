@@ -7,7 +7,6 @@
 //   dbAll(sql, params)  -> rows[]
 //   dbRun(sql, params)  -> { changes, insertId }
 //   dbTx(async tx => …) -> atomic; tx has the same get/all/run
-import { DatabaseSync } from 'node:sqlite';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -21,6 +20,7 @@ if (!['sqlite', 'tidb'].includes(dbDriver)) throw new Error(`Bad DB_DRIVER=${raw
 // ---------------------------------------------------------------- sqlite ---
 let sqlite = null;
 if (!isTidb) {
+  const { DatabaseSync } = await import('node:sqlite'); // only needed for local dev; skipped on TiDB
   const file = path.resolve(path.join(__dirname, '..', '..'), process.env.DB_FILE || './data/env.db');
   fs.mkdirSync(path.dirname(file), { recursive: true });
   sqlite = new DatabaseSync(file);
