@@ -1,0 +1,55 @@
+/* Biophilic theme: moss, sage, warm off-white, earth browns, one clay accent. Light is default; [data-theme='dark'] is a forest-night variant. */
+:root {
+  --moss: #4A6B3A;
+  --moss-deep: #2F4A28;
+  --sage: #A8B89A;
+  --sage-soft: #DDE5D2;
+  --cream: #F6F2E9;
+  --earth: #6B4F3A;
+  --clay: #B8693D;          /* the one accent: used sparingly for highlights */
+
+  --bg: #F6F2E9;
+  --surface: #FFFDF8;
+  --text: #263020;
+  --muted: #5E6657;
+  --border: #DDD6C6;
+  --ink: #263020;
+  --accent: #3F6B3A;         /* moss: links, primary buttons, focus */
+  --accent-ink: #FFFFFF;
+  --accent-tint: #E4EBD9;
+  --warn: #8A4B22;
+  --warn-tint: #F3E4D6;
+  --info: #2F5E5A;
+  --info-tint: #E1ECE6;
+  --ok: #3F6B3A;
+  --ok-tint: #E4EBD9;
+  --danger: #A3362B;
+  --chart-k: #B8693D;
+  --chart-p: #3F6B3A;
+  --green: #5F7A4A;
+  --shadow: 0 1px 2px rgba(38, 48, 32, .06), 0 10px 28px rgba(38, 48, 32, .07);
+  --shadow-lg: 0 2px 4px rgba(38, 48, 32, .06), 0 22px 48px rgba(38, 48, 32, .12);
+
+  /* soft organic grain, used sparingly as a page overlay */
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .29 0 0 0 0 .36 0 0 0 0 .22 0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  --grain-opacity: .22;
+
+  --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px; --s5: 48px;
+  --radius: 14px;
+  --radius-lg: 24px;
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --serif: 'Fraunces', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --fs-body: 16px; --fs-small: 14px; --fs-xs: 12px; --fs-h: 32px;
+  --lh: 1.65;
+  --max: 960px;
+  --fade: 200ms;
+}
+:root[data-theme='dark'] {
+  --bg: #121810; --surface: #1A2218; --text: #ECEFE3; --muted: #A7B09B; --border: #2E3A2A; --ink: #ECEFE3;
+  --accent: #A9C58F; --accent-ink: #14200F; --accent-tint: rgba(169, 197, 143, .13);
+  --warn: #E1A06E; --warn-tint: rgba(225, 160, 110, .13); --info: #8FC4BA; --info-tint: rgba(143, 196, 186, .12);
+  --ok: #A9C58F; --ok-tint: rgba(169, 197, 143, .13); --danger: #F09A8F;
+  --chart-k: #E1A06E; --chart-p: #A9C58F; --green: #8DB06F; --sage-soft: #26311F;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 28px rgba(0, 0, 0, .28); --shadow-lg: 0 22px 48px rgba(0, 0, 0, .4);
+  --grain-opacity: .35;
+}
